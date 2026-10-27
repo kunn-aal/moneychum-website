@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moneychum | Money Planner</title>
+    <link rel="stylesheet" href="planner.css">
+</head>
+
+<body>
+    <header class="site-header" id="top">
+        <div class="header-inner">
+            <div class="brand">
+            <img src="assets/logo2.png" alt="Moneychum" class="brand-logo">
+            <p class="brand-tagline">Your money. Your choices.</p>
+            </div>
+
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="index.html">Dashboard</a>
+                <a href="planner.html" aria-current="page">Money Planner</a>
+                <a href="guide.html">Financial Guide</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="planner-container">
+        <section class="planner-section" aria-labelledby="financial-situation-heading">
+            <h2 id="financial-situation-heading">Your Financial Situation</h2>
+
+            <div class="form-grid">
+                <div class="form-field">
+                    <label for="totalMoney">Current Total Money (₹)</label>
+                    <input type="number" id="totalMoney" min="0" step="0.01" placeholder="e.g. 10000">
+                </div>
+
+                <div class="form-field">
+                    <label for="monthlyIncome">Monthly Income (₹)</label>
+                    <input type="number" id="monthlyIncome" min="0" step="0.01" placeholder="e.g. 8000">
+                </div>
+
+                <div class="form-field">
+                    <label for="currentSavings">Current Savings (₹)</label>
+                    <input type="number" id="currentSavings" min="0" step="0.01" placeholder="e.g. 2000">
+                </div>
+            </div>
+        </section>
+
+        <section class="planner-section" aria-labelledby="expenses-heading">
+            <h2 id="expenses-heading">Essential Monthly Expenses</h2>
+
+            <div class="form-grid">
+                <div class="form-field">
+                    <label for="food">Food (₹)</label>
+                    <input type="number" id="food" min="0" step="0.01" placeholder="Monthly amount">
+                </div>
+
+                <div class="form-field">
+                    <label for="transport">Transport (₹)</label>
+                    <input type="number" id="transport" min="0" step="0.01" placeholder="Monthly amount">
+                </div>
+
+                <div class="form-field">
+                    <label for="college">College (₹)</label>
+                    <input type="number" id="college" min="0" step="0.01" placeholder="Monthly amount">
+                </div>
+
+                <div class="form-field">
+                    <label for="phone">Phone / Internet (₹)</label>
+                    <input type="number" id="phone" min="0" step="0.01" placeholder="Monthly amount">
+                </div>
+
+                <div class="form-field">
+                    <label for="other">Other Essentials (₹)</label>
+                    <input type="number" id="other" min="0" step="0.01" placeholder="Monthly amount">
+                </div>
+            </div>
+        </section>
+
+        <section class="planner-section" aria-labelledby="savings-plan-heading">
+            <h2 id="savings-plan-heading">Savings Plan</h2>
+
+            <div class="form-grid form-grid--two">
+                <div class="form-field">
+                    <label for="monthlySavings">Monthly Savings Target (₹)</label>
+                    <input type="number" id="monthlySavings" min="0" step="0.01" placeholder="e.g. 1500">
+                </div>
+
+                <div class="form-field">
+                    <label for="daysToManage">How many days should your current money last?</label>
+                    <input type="number" id="daysToManage" min="1" step="1" placeholder="e.g. 30">
+                </div>
+            </div>
+        </section>
+
+        <section class="planner-section" aria-labelledby="savings-goal-heading">
+            <h2 id="savings-goal-heading">Savings Goal <span class="optional-label">Optional</span></h2>
+
+            <div class="form-grid form-grid--two">
+                <div class="form-field">
+                    <label for="goalName">What are you saving for?</label>
+                    <input type="text" id="goalName" placeholder="e.g. New headphones">
+                </div>
+
+                <div class="form-field">
+                    <label for="goalAmount">Goal Amount (₹)</label>
+                    <input type="number" id="goalAmount" min="0" step="0.01" placeholder="e.g. 20000">
+                </div>
+            </div>
+        </section>
+
+        <div class="actions">
+            <button type="button" id="analyzeBtn">Analyze My Finances</button>
+        </div>
+
+        <section class="planner-section overview-section" aria-labelledby="overview-heading">
+            <h2 id="overview-heading">Your Financial Overview</h2>
+            <div id="financialResult" aria-live="polite"></div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p class="footer-brand">Moneychum</p>
+            <p class="footer-message">Make informed choices. Your money, your decision.</p>
+            <p class="footer-note">For educational purposes; use the guidance to help make your own financial decisions.</p>
+            <a class="back-to-top" href="#top">Back to top ↑</a>
+            <p class="copyright">© 2026 Moneychum</p>
+        </div>
+    </footer>
+</body>
+
+</html>
