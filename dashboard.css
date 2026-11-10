@@ -479,4 +479,30 @@ button {
         align-items: flex-start;
     }
 }
+/* MONEYCHUM BRAND FIX */
+.brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 4px;
+    flex-shrink: 0;
+    text-decoration: none;
+}
 
+.brand-logo {
+    width: 160px;
+    height: 55px;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.brand-tagline {
+    display: block;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.4;
+}
