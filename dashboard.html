@@ -1,0 +1,264 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Moneychum | Financial Dashboard</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="site-header">
+        <div class="header-inner">
+
+            <a href="home.html" class="brand">
+                <h2>Moneychum</h2>
+                <span>Your money. Your choices.</span>
+            </a>
+
+            <nav class="main-nav">
+                <a href="home.html">Home</a>
+                <a href="dashboard.html" class="active">Dashboard</a>
+                <a href="planner.html">Money Planner</a>
+                <a href="#">Financial Guide</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main class="dashboard-container">
+
+        <!-- WELCOME -->
+        <section class="welcome-section">
+            <div>
+                <p class="eyebrow">YOUR FINANCIAL SPACE</p>
+                <h1>Financial Dashboard</h1>
+                <p>Understand your money. Make smarter decisions.</p>
+            </div>
+        </section>
+
+
+        <!-- SUMMARY -->
+        <section class="summary-grid">
+
+            <div class="summary-card">
+                <span class="card-icon green-icon">₹</span>
+                <p>Available Balance</p>
+                <h2 id="balance">₹8,500</h2>
+                <small>Money currently available</small>
+            </div>
+
+            <div class="summary-card">
+                <span class="card-icon blue-icon">↗</span>
+                <p>Monthly Income</p>
+                <h2 id="income">₹6,000</h2>
+                <small>Expected monthly income</small>
+            </div>
+
+            <div class="summary-card">
+                <span class="card-icon orange-icon">↘</span>
+                <p>Monthly Expenses</p>
+                <h2 id="expenses">₹2,500</h2>
+                <small>Total recorded expenses</small>
+            </div>
+
+            <div class="summary-card">
+                <span class="card-icon purple-icon">◎</span>
+                <p>Current Savings</p>
+                <h2 id="savings">₹2,000</h2>
+                <small>Your existing savings</small>
+            </div>
+
+        </section>
+
+
+        <!-- SPENDING AND GUIDANCE -->
+        <section class="middle-grid">
+
+            <div class="dashboard-card">
+                <div class="section-heading">
+                    <h2>Spending Breakdown</h2>
+                    <p>See where your money goes.</p>
+                </div>
+
+                <div class="spending-item">
+                    <div class="spending-info">
+                        <span>Food</span>
+                        <strong id="foodAmount">₹1,000</strong>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress food" id="foodBar"></div>
+                    </div>
+                </div>
+
+                <div class="spending-item">
+                    <div class="spending-info">
+                        <span>Transportation</span>
+                        <strong id="transportAmount">₹500</strong>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress transport" id="transportBar"></div>
+                    </div>
+                </div>
+
+                <div class="spending-item">
+                    <div class="spending-info">
+                        <span>Shopping</span>
+                        <strong id="shoppingAmount">₹700</strong>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress shopping" id="shoppingBar"></div>
+                    </div>
+                </div>
+
+                <div class="spending-item">
+                    <div class="spending-info">
+                        <span>Entertainment</span>
+                        <strong id="entertainmentAmount">₹300</strong>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress entertainment" id="entertainmentBar"></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="guidance-card">
+                <p class="guidance-label">DAILY SPENDING GUIDANCE</p>
+
+                <h2 id="dailyTarget">₹200</h2>
+
+                <p id="dailySpent">Today's spending: ₹0</p>
+
+                <div class="guidance-divider"></div>
+
+                <p id="dailyRemaining">
+                    You have ₹200 remaining in today's target.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- ADD EXPENSE -->
+        <section class="dashboard-card">
+            <div class="section-heading">
+                <h2>Record an Expense</h2>
+                <p>Keep track of your daily spending.</p>
+            </div>
+
+            <form id="expenseForm" class="expense-form">
+
+                <div class="expense-field">
+                    <label for="amount">Amount (₹)</label>
+                    <input type="number" id="amount"
+                        placeholder="Enter amount" min="0.01"
+                        step="0.01" required>
+                </div>
+
+                <div class="expense-field">
+                    <label for="category">Category</label>
+                    <select id="category">
+                        <option value="food">Food</option>
+                        <option value="transport">Transportation</option>
+                        <option value="shopping">Shopping</option>
+                        <option value="entertainment">Entertainment</option>
+                    </select>
+                </div>
+
+                <button type="submit">Add Expense</button>
+
+            </form>
+
+            <p id="message" aria-live="polite"></p>
+        </section>
+
+
+        <!-- FINANCIAL OBSERVATIONS -->
+        <section class="dashboard-card">
+            <div class="section-heading">
+                <h2>Financial Observations</h2>
+                <p>Advice based on your spending.</p>
+            </div>
+
+            <div id="observations">
+                <div class="alert success">
+                    Welcome! Keep tracking your expenses to receive guidance.
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SAVINGS GOAL -->
+        <section class="dashboard-card">
+
+            <div class="section-heading">
+                <h2>Your Savings Goal</h2>
+                <p>Track your progress towards something you want.</p>
+            </div>
+
+            <div class="goal-info">
+                <div>
+                    <h3 id="goalName">New Headphones</h3>
+                    <p id="goalDetails">₹6,000 saved out of ₹10,000</p>
+                </div>
+
+                <strong id="goalPercentage">60%</strong>
+            </div>
+
+            <div class="goal-progress">
+                <div id="goalFill"></div>
+            </div>
+
+            <p id="goalRemaining"></p>
+
+        </section>
+
+
+        <!-- ACTIONS -->
+        <section class="quick-actions">
+            <h2>Manage Your Money</h2>
+
+            <div class="action-buttons">
+                <a href="planner.html" class="primary-button">
+                    Open Money Planner →
+                </a>
+
+                <button id="resetButton" class="reset-button" type="button">
+                    Reset Sample Data
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>
+                <h3>Moneychum</h3>
+                <p>Your money. Your choices.</p>
+            </div>
+
+            <p>Helping students make smarter financial decisions.</p>
+
+            <p class="copyright">
+                © 2026 Moneychum. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+
+    <script src="dashboard.js"></script>
+
+</body>
+</html>
+
