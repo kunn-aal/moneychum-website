@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Plan your spending, understand your savings, and make informed money decisions with Moneychum.">
+    <title>Moneychum | Money Planner</title>
+    <link rel="stylesheet" href="/moneychum-website/css/planner.css">
+    <script src="/moneychum-website/js/planner.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header" id="top">
+        <div class="header-inner">
+            <a class="brand" href="home.html" aria-label="Moneychum home">
+                <img src="/moneychum-website/assets/logo2.png" alt="Moneychum" class="brand-logo">
+                <span class="brand-tagline">Your money. Your choices.</span>
+            </a>
+
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="home.html">Home</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="planner.html" aria-current="page">Money Planner</a>
+                <a href="guide.html">Financial Guide</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="planner-container">
+        <section class="planner-hero" aria-labelledby="planner-title">
+            <div class="planner-hero-copy">
+                <p class="eyebrow">YOUR MONEY, YOUR PLAN</p>
+                <h1 id="planner-title">Make room for <span>what matters.</span></h1>
+                <p class="planner-intro">
+                    Get a clearer picture of your money, plan for the days ahead, and understand the impact of your
+                    choices.
+                    Start with a few details. We'll help you think through the next steps.
+                </p>
+                <div class="hero-benefits" aria-label="What you can do with the Money Planner">
+                    <span><b aria-hidden="true">✓</b> Understand your available money</span>
+                    <span><b aria-hidden="true">✓</b> Keep savings goals in view</span>
+                    <span><b aria-hidden="true">✓</b> Plan before a purchase</span>
+                </div>
+            </div>
+
+            <aside class="planner-hero-panel" aria-label="How the planner works">
+                <div class="hero-panel-orbit" aria-hidden="true"></div>
+                <div class="panel-topline"><span class="panel-status-dot"></span> A SIMPLE MONEY CHECK-IN</div>
+                <div class="panel-symbol" aria-hidden="true">₹</div>
+                <h2>Small steps. Clearer choices.</h2>
+                <p class="panel-description">Your plan comes together in three simple steps.</p>
+                <ol class="mini-steps">
+                    <li><span class="mini-step-number">01</span><span><strong>Share your picture</strong><small>Add your
+                                money, expenses, and goals.</small></span></li>
+                    <li><span class="mini-step-number">02</span><span><strong>See the numbers</strong><small>Understand
+                                what's available and what needs attention.</small></span></li>
+                    <li><span class="mini-step-number">03</span><span><strong>Choose your next step</strong><small>Use
+                                the guidance that fits your situation.</small></span></li>
+                </ol>
+            </aside>
+        </section>
+
+        <div class="form-intro">
+            <div>
+                <p class="eyebrow">LET'S GET STARTED</p>
+                <h2>Build your money picture</h2>
+                <p>Enter your details below. You can leave the savings goal blank if you don't have one right now.</p>
+            </div>
+            <div class="form-note"><span aria-hidden="true">✦</span> You stay in control of every decision.</div>
+        </div>
+
+        <section class="planner-section section-money" aria-labelledby="financial-situation-heading">
+            <div class="section-heading-row">
+                <div class="section-icon" aria-hidden="true">₹</div>
+                <div class="section-heading-copy">
+                    <p class="section-kicker">STEP 01 · YOUR STARTING POINT</p>
+                    <h2 id="financial-situation-heading">Your Financial Situation</h2>
+                    <p class="section-description">How much money do you have available in your current situation?</p>
+                </div>
+            </div>
+
+            <div class="form-grid">
+                <div class="form-field">
+                    <label for="totalMoney">Current Total Money (₹)</label>
+                    <input type="number" id="totalMoney" min="0" step="0.01" placeholder="e.g. 10000">
+                </div>
+                <div class="form-field">
+                    <label for="monthlyIncome">Monthly Income (₹)</label>
+                    <input type="number" id="monthlyIncome" min="0" step="0.01" placeholder="e.g. 8000">
+                </div>
+                <div class="form-field">
+                    <label for="currentSavings">Current Savings (₹)</label>
+                    <input type="number" id="currentSavings" min="0" step="0.01" placeholder="e.g. 2000">
+                </div>
+            </div>
+        </section>
+
+        <section class="planner-section section-expenses" aria-labelledby="expenses-heading">
+            <div class="section-heading-row">
+                <div class="section-icon" aria-hidden="true">↘</div>
+                <div class="section-heading-copy">
+                    <p class="section-kicker">STEP 02 · YOUR MONTHLY OUTGOING</p>
+                    <h2 id="expenses-heading">Essential Monthly Expenses</h2>
+                    <p class="section-description">Add the regular costs you need to account for each month.</p>
+                </div>
+            </div>
+
+            <div class="form-grid">
+                <div class="form-field">
+                    <label for="food">Food (₹)</label>
+                    <input type="number" id="food" min="0" step="0.01" placeholder="Monthly amount">
+                </div>
+                <div class="form-field">
+                    <label for="transport">Transport (₹)</label>
+                    <input type="number" id="transport" min="0" step="0.01" placeholder="Monthly amount">
+                </div>
+                <div class="form-field">
+                    <label for="college">College (₹)</label>
+                    <input type="number" id="college" min="0" step="0.01" placeholder="Monthly amount">
+                </div>
+                <div class="form-field">
+                    <label for="phone">Phone / Internet (₹)</label>
+                    <input type="number" id="phone" min="0" step="0.01" placeholder="Monthly amount">
+                </div>
+                <div class="form-field">
+                    <label for="other">Other Essentials (₹)</label>
+                    <input type="number" id="other" min="0" step="0.01" placeholder="Monthly amount">
+                </div>
+            </div>
+        </section>
+
+        <section class="planner-section section-savings" aria-labelledby="savings-plan-heading">
+            <div class="section-heading-row">
+                <div class="section-icon" aria-hidden="true">↗</div>
+                <div class="section-heading-copy">
+                    <p class="section-kicker">STEP 03 · PLAN AHEAD</p>
+                    <h2 id="savings-plan-heading">Savings Plan</h2>
+                    <p class="section-description">Set a savings target and tell us how long your current money needs to
+                        last.</p>
+                </div>
+            </div>
+
+            <div class="form-grid form-grid--two">
+                <div class="form-field">
+                    <label for="monthlySavings">Monthly Savings Target (₹)</label>
+                    <input type="number" id="monthlySavings" min="0" step="0.01" placeholder="e.g. 1500">
+                </div>
+                <div class="form-field">
+                    <label for="daysToManage">How many days should your current money last?</label>
+                    <input type="number" id="daysToManage" min="1" step="1" placeholder="e.g. 30">
+                </div>
+            </div>
+        </section>
+
+        <section class="planner-section section-goal" aria-labelledby="savings-goal-heading">
+            <div class="section-heading-row">
+                <div class="section-icon" aria-hidden="true">◎</div>
+                <div class="section-heading-copy">
+                    <p class="section-kicker">STEP 04 · SOMETHING TO AIM FOR</p>
+                    <h2 id="savings-goal-heading">Savings Goal <span class="optional-label">Optional</span></h2>
+                    <p class="section-description">Saving for something specific? Add it here so you can see how choices
+                        may affect it.</p>
+                </div>
+            </div>
+
+            <div class="form-grid form-grid--two">
+                <div class="form-field">
+                    <label for="goalName">What are you saving for?</label>
+                    <input type="text" id="goalName" placeholder="e.g. New headphones">
+                </div>
+                <div class="form-field">
+                    <label for="goalAmount">Goal Amount (₹)</label>
+                    <input type="number" id="goalAmount" min="0" step="0.01" placeholder="e.g. 20000">
+                </div>
+            </div>
+        </section>
+
+        <div class="actions">
+            <div class="actions-copy">
+                <strong>Ready to see your money picture?</strong>
+                <span>Your entries will be turned into a clear financial overview.</span>
+            </div>
+            <button type="button" id="analyzeBtn">Analyze My Finances <span aria-hidden="true">→</span></button>
+        </div>
+
+        <section class="planner-section overview-section" aria-labelledby="overview-heading">
+            <div class="section-heading-row overview-heading-row">
+                <div class="section-icon overview-icon" aria-hidden="true">✦</div>
+                <div class="section-heading-copy">
+                    <p class="section-kicker">YOUR RESULTS</p>
+                    <h2 id="overview-heading">Your Financial Overview</h2>
+                    <p class="section-description">Your personalized summary and suggestions will appear here.</p>
+                </div>
+            </div>
+            <div id="financialResult" aria-live="polite"></div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand-group">
+                <p class="footer-brand">Moneychum</p>
+                <p class="footer-tagline">Your money. Your choices.</p>
+            </div>
+            <p class="footer-message">Make informed choices. Your money, your decision.</p>
+            <p class="footer-note">For educational purposes; use the guidance to help make your own financial decisions.
+            </p>
+            <a class="back-to-top" href="#top">Back to top ↑</a>
+            <p class="copyright">© 2026 Moneychum</p>
+        </div>
+    </footer>
+    <script src="planner.js" defer></script>
+</body>
+
+</html>
