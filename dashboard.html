@@ -1,273 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Moneychum | Financial Dashboard</title>
-
+    <meta name="description" content="Moneychum student financial dashboard">
+    <title>Moneychum | Dashboard</title>
     <link rel="stylesheet" href="dashboard.css">
     <script src="dashboard.js" defer></script>
 </head>
-
 <body>
-    <!-- HEADER: same Moneychum branding -->
     <header class="site-header" id="top">
         <div class="header-inner">
-
-<<<<<<< HEAD
-            <a href="home.html" class="brand">
-              <img src="assets/logo2.png" alt="Moneychum logo" class="brand-logo">
-                <span class="brand-tagline">Your money, your choices.</span>
+            <a href="home.html" class="brand" aria-label="Moneychum home">
+                <img src="assets/logo2.png" alt="Moneychum" class="brand-logo">
+                <span class="brand-tagline">Your money. Your choices.</span>
             </a>
-=======
-                               <a class="brand" href="home.html" aria-label="Moneychum home">
-    <img src="assets/logo2.png"
-         alt="Moneychum"
-         class="brand-logo">
 
-    <span class="brand-tagline">
-        Your money. Your choices.
-    </span>
-             </a>
->>>>>>> 5530defd6d8a89009fb1e1b75c2058b2cc0d6035
-
-            <nav class="main-nav">
+            <nav class="main-nav" aria-label="Main navigation">
                 <a href="home.html">Home</a>
-                <a href="dashboard.html" class="active">Dashboard</a>
+                <a href="index.html" class="active" aria-current="page">Dashboard</a>
                 <a href="planner.html">Money Planner</a>
                 <a href="guide.html">Financial Guide</a>
             </nav>
-
         </div>
     </header>
 
-
     <main class="dashboard-container">
-
-        <!-- WELCOME -->
         <section class="welcome-section">
             <div>
-                <p class="eyebrow">YOUR FINANCIAL SPACE</p>
-                <h1>Financial Dashboard</h1>
-                <p>Understand your money. Make smarter decisions.</p>
+                <p class="eyebrow">YOUR MONEY, AT A GLANCE</p>
+                <h1>Your financial dashboard</h1>
+                <p>Keep an eye on your spending, understand what is left, and make your next money decision with confidence.</p>
             </div>
+            <a class="welcome-link" href="planner.html">Review my money plan <span aria-hidden="true">→</span></a>
         </section>
 
+        <section class="summary-grid" aria-label="Financial summary">
+            <article class="summary-card">
+                <div class="card-topline">
+                    <span class="card-icon green-icon" aria-hidden="true">₹</span>
+                    <span class="card-kicker">AVAILABLE</span>
+                </div>
+                <p>Available to manage</p>
+                <h2 id="availableMoneyValue">—</h2>
+                <small id="availableMoneyNote">Add your details in Money Planner</small>
+            </article>
 
-        <!-- SUMMARY -->
-        <section class="summary-grid">
+            <article class="summary-card">
+                <div class="card-topline">
+                    <span class="card-icon blue-icon" aria-hidden="true">↗</span>
+                    <span class="card-kicker">THIS MONTH</span>
+                </div>
+                <p>Tracked spending</p>
+                <h2 id="monthlySpentValue">₹0</h2>
+                <small id="monthlySpentNote">Expenses you add appear here</small>
+            </article>
 
-            <div class="summary-card">
-                <span class="card-icon green-icon">₹</span>
-                <p>Available Balance</p>
-                <h2 id="balance">₹8,500</h2>
-                <small>Money currently available</small>
-            </div>
+            <article class="summary-card">
+                <div class="card-topline">
+                    <span class="card-icon orange-icon" aria-hidden="true">◷</span>
+                    <span class="card-kicker">DAILY GUIDE</span>
+                </div>
+                <p>Suggested daily amount</p>
+                <h2 id="dailyBudgetValue">—</h2>
+                <small id="dailyBudgetNote">Based on your Money Planner details</small>
+            </article>
 
-            <div class="summary-card">
-                <span class="card-icon blue-icon">↗</span>
-                <p>Monthly Income</p>
-                <h2 id="income">₹6,000</h2>
-                <small>Expected monthly income</small>
-            </div>
-
-            <div class="summary-card">
-                <span class="card-icon orange-icon">↘</span>
-                <p>Monthly Expenses</p>
-                <h2 id="expenses">₹2,500</h2>
-                <small>Total recorded expenses</small>
-            </div>
-
-            <div class="summary-card">
-                <span class="card-icon purple-icon">◎</span>
-                <p>Current Savings</p>
-                <h2 id="savings">₹2,000</h2>
-                <small>Your existing savings</small>
-            </div>
-
+            <article class="summary-card">
+                <div class="card-topline">
+                    <span class="card-icon purple-icon" aria-hidden="true">◇</span>
+                    <span class="card-kicker">YOUR GOAL</span>
+                </div>
+                <p>Savings goal progress</p>
+                <h2 id="goalStatusValue">—</h2>
+                <small id="goalStatusNote">Set a goal in Money Planner</small>
+            </article>
         </section>
 
-
-        <!-- SPENDING AND GUIDANCE -->
         <section class="middle-grid">
-
-            <div class="dashboard-card">
+            <article class="dashboard-card spending-card">
                 <div class="section-heading">
-                    <h2>Spending Breakdown</h2>
-                    <p>See where your money goes.</p>
+                    <div>
+                        <p class="eyebrow">SPENDING SNAPSHOT</p>
+                        <h2>Where your money is going</h2>
+                    </div>
+                    <span class="period-label">This month</span>
                 </div>
 
                 <div class="spending-item">
-                    <div class="spending-info">
-                        <span>Food</span>
-                        <strong id="foodAmount">₹1,000</strong>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress food" id="foodBar"></div>
-                    </div>
+                    <div class="spending-info"><span>Food</span><strong id="spendFood">₹0</strong></div>
+                    <div class="progress-bar"><div class="progress food" id="barFood"></div></div>
                 </div>
-
                 <div class="spending-item">
-                    <div class="spending-info">
-                        <span>Transportation</span>
-                        <strong id="transportAmount">₹500</strong>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress transport" id="transportBar"></div>
-                    </div>
+                    <div class="spending-info"><span>Transport</span><strong id="spendTransport">₹0</strong></div>
+                    <div class="progress-bar"><div class="progress transport" id="barTransport"></div></div>
                 </div>
-
                 <div class="spending-item">
-                    <div class="spending-info">
-                        <span>Shopping</span>
-                        <strong id="shoppingAmount">₹700</strong>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress shopping" id="shoppingBar"></div>
-                    </div>
+                    <div class="spending-info"><span>Shopping</span><strong id="spendShopping">₹0</strong></div>
+                    <div class="progress-bar"><div class="progress shopping" id="barShopping"></div></div>
                 </div>
-
                 <div class="spending-item">
-                    <div class="spending-info">
-                        <span>Entertainment</span>
-                        <strong id="entertainmentAmount">₹300</strong>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress entertainment" id="entertainmentBar"></div>
-                    </div>
+                    <div class="spending-info"><span>Entertainment</span><strong id="spendEntertainment">₹0</strong></div>
+                    <div class="progress-bar"><div class="progress entertainment" id="barEntertainment"></div></div>
                 </div>
-            </div>
+                <div class="spending-item spending-item-last">
+                    <div class="spending-info"><span>Other</span><strong id="spendOther">₹0</strong></div>
+                    <div class="progress-bar"><div class="progress other" id="barOther"></div></div>
+                </div>
+                <p class="chart-note" id="spendingChartNote">Add an expense below to start building your spending snapshot.</p>
+            </article>
 
-
-            <div class="guidance-card">
-                <p class="guidance-label">DAILY SPENDING GUIDANCE</p>
-
-                <h2 id="dailyTarget">₹200</h2>
-
-                <p id="dailySpent">Today's spending: ₹0</p>
-
+            <article class="guidance-card">
+                <div class="guidance-topline">
+                    <span class="guidance-icon" aria-hidden="true">✦</span>
+                    <span class="guidance-label">A LITTLE DAILY GUIDANCE</span>
+                </div>
+                <h2 id="dailyGuidanceAmount">—</h2>
+                <p class="guidance-title">Your suggested daily amount</p>
+                <p id="dailyGuidanceText">Once you add your financial details in Money Planner, we can help you pace your available money.</p>
                 <div class="guidance-divider"></div>
-
-                <p id="dailyRemaining">
-                    You have ₹200 remaining in today's target.
-                </p>
-            </div>
-
+                <div class="guidance-bottom">
+                    <span>Available after tracked spending</span>
+                    <strong id="remainingMoneyValue">—</strong>
+                </div>
+            </article>
         </section>
 
-
-        <!-- ADD EXPENSE -->
-        <section class="dashboard-card">
+        <section class="dashboard-card expense-entry-card">
             <div class="section-heading">
-                <h2>Record an Expense</h2>
-                <p>Keep track of your daily spending.</p>
+                <div>
+                    <p class="eyebrow">KEEP YOUR RECORDS CURRENT</p>
+                    <h2>Add a daily expense</h2>
+                    <p>Track a purchase here to see how it affects your available money.</p>
+                </div>
+                <span class="entry-badge">Quick update</span>
             </div>
 
-            <form id="expenseForm" class="expense-form">
-
+            <form class="expense-form" id="expenseForm">
                 <div class="expense-field">
-                    <label for="amount">Amount (₹)</label>
-                    <input type="number" id="amount" placeholder="Enter amount" min="0.01" step="0.01" required>
+                    <label for="expenseName">What did you spend on?</label>
+                    <input type="text" id="expenseName" name="expenseName" placeholder="e.g. Lunch, bus pass" maxlength="60" required>
                 </div>
-
                 <div class="expense-field">
-                    <label for="category">Category</label>
-                    <select id="category">
+                    <label for="expenseAmount">Amount (₹)</label>
+                    <input type="number" id="expenseAmount" name="expenseAmount" placeholder="e.g. 150" min="1" step="0.01" required>
+                </div>
+                <div class="expense-field">
+                    <label for="expenseCategory">Category</label>
+                    <select id="expenseCategory" name="expenseCategory" required>
                         <option value="food">Food</option>
-                        <option value="transport">Transportation</option>
+                        <option value="transport">Transport</option>
                         <option value="shopping">Shopping</option>
                         <option value="entertainment">Entertainment</option>
+                        <option value="other">Other</option>
                     </select>
                 </div>
-
-                <button type="submit">Add Expense</button>
-
+                <button type="submit" class="primary-button">Add expense <span aria-hidden="true">＋</span></button>
             </form>
-
-            <p id="message" aria-live="polite"></p>
+            <p id="message" class="form-message" role="status" aria-live="polite"></p>
         </section>
 
-
-        <!-- FINANCIAL OBSERVATIONS -->
-        <section class="dashboard-card">
-            <div class="section-heading">
-                <h2>Financial Observations</h2>
-                <p>Advice based on your spending.</p>
-            </div>
-
-            <div id="observations">
-                <div class="alert success">
-                    Welcome! Keep tracking your expenses to receive guidance.
+        <section class="lower-grid">
+            <article class="dashboard-card observations-card">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">A QUICK CHECK-IN</p>
+                        <h2>Things worth noticing</h2>
+                    </div>
                 </div>
-            </div>
+                <div id="alertsContainer" class="alerts-container">
+                    <div class="alert info">Complete your Money Planner details to see observations about your finances here.</div>
+                </div>
+            </article>
+
+            <article class="dashboard-card goal-card">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">KEEP IT IN SIGHT</p>
+                        <h2>Your savings goal</h2>
+                    </div>
+                    <span class="goal-sparkle" aria-hidden="true">✧</span>
+                </div>
+                <div class="goal-info">
+                    <div>
+                        <h3 id="goalName">No goal added yet</h3>
+                        <p id="goalSavedLabel">Set a goal in Money Planner</p>
+                    </div>
+                    <strong id="goalPercent">—</strong>
+                </div>
+                <div class="goal-progress"><div id="goalFill"></div></div>
+                <p id="goalRemaining">Your progress will appear here when you add a savings goal.</p>
+                <a href="planner.html" class="text-link">Update my goal <span aria-hidden="true">→</span></a>
+            </article>
         </section>
 
-
-        <!-- SAVINGS GOAL -->
-        <section class="dashboard-card">
-
-            <div class="section-heading">
-                <h2>Your Savings Goal</h2>
-                <p>Track your progress towards something you want.</p>
-            </div>
-
-            <div class="goal-info">
+        <section class="dashboard-card recent-expenses-card">
+            <div class="section-heading recent-heading">
                 <div>
-                    <h3 id="goalName">New Headphones</h3>
-                    <p id="goalDetails">₹6,000 saved out of ₹10,000</p>
+                    <p class="eyebrow">YOUR ACTIVITY</p>
+                    <h2>Recent expenses</h2>
                 </div>
-
-                <strong id="goalPercentage">60%</strong>
+                <button type="button" class="text-button" id="clearExpensesBtn">Clear tracked expenses</button>
             </div>
-
-            <div class="goal-progress">
-                <div id="goalFill"></div>
+            <div id="recentExpenses" class="recent-expenses">
+                <p class="empty-state">No expenses recorded yet. Add your first expense above.</p>
             </div>
-
-            <p id="goalRemaining"></p>
-
         </section>
 
-
-        <!-- ACTIONS -->
         <section class="quick-actions">
-            <h2>Manage Your Money</h2>
-
+            <div>
+                <p class="eyebrow">WHAT'S NEXT?</p>
+                <h2>Make your next money move</h2>
+                <p>Use your planner to think ahead or explore practical student finance guidance.</p>
+            </div>
             <div class="action-buttons">
-                <a href="planner.html" class="primary-button">
-                    Open Money Planner →
-                </a>
-
-                <button id="resetButton" class="reset-button" type="button">
-                    Reset Sample Data
-                </button>
+                <a href="planner.html" class="primary-button action-link">Open Money Planner <span aria-hidden="true">→</span></a>
+                <a href="guide.html" class="reset-button action-link">Explore Financial Guide</a>
             </div>
         </section>
-
     </main>
 
-
-    <!-- FOOTER -->
     <footer class="site-footer">
         <div class="footer-inner">
             <div>
-                <h3>Moneychum</h3>
-                <p>Your money. Your choices.</p>
+                <p class="footer-brand">Moneychum</p>
+                <p class="footer-tagline">Your money. Your choices.</p>
             </div>
-
-            <p>Helping students make smarter financial decisions.</p>
-
-            <p class="copyright">
-                © 2026 Moneychum. All rights reserved.
-            </p>
+            <p class="footer-note">Moneychum helps students understand their money and consider their options. You stay in control of every decision.</p>
+            <a href="#top" class="back-to-top">Back to top ↑</a>
+            <p class="copyright">© 2026 Moneychum. Built to support better-informed money decisions.</p>
         </div>
     </footer>
-
-
-    <script src="dashboard.js"></script>
-
 </body>
-
 </html>
