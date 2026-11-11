@@ -97,7 +97,8 @@ a {
 
 .main-nav a:hover,
 .main-nav a.active {
-    background: rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.909);
+    color:#067f60
 }
 
 /* COMMON TEXT */
