@@ -87,18 +87,23 @@ a {
 }
 
 .main-nav a {
-    color: #ffffff;
-    padding: 9px 13px;
+    padding: 8px 12px;
+    border: 1px solid transparent;
     border-radius: 8px;
+    color: rgba(255,255,255,.97);
+    text-decoration: none;
     font-size: 14px;
     font-weight: 600;
-    transition: background-color 0.2s ease;
+    transition: background-color .16s ease, border-color .16s ease;
 }
-
 .main-nav a:hover,
-.main-nav a.active {
-    background: rgba(255, 255, 255, 0.18);
+.main-nav a:focus-visible {
+    background: rgba(255,255,255,.13);
+    border-color: rgba(255,255,255,.25);
+    outline: none;
 }
+.main-nav a.active,
+.main-nav a[aria-current="page"] { background: #fff; color: #087d65; }
 
 /* COMMON TEXT */
 .eyebrow {
